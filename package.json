@@ -1,0 +1,13 @@
+{
+  "name": "library",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Phone-first Library for app technical/functional/usage docs (Phase 0 docs baseline)",
+  "scripts": {
+    "dev": "echo Phase 0: no server yet. See docs/ROADMAP.md — planned port 3330",
+    "check:schema": "node -e \"JSON.parse(require('fs').readFileSync('schema/content.schema.json','utf8')); console.log('schema ok')\""
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

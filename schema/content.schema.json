@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/sivaram311/library/schema/content.schema.json",
+  "title": "LibraryContent",
+  "type": "object",
+  "required": ["version", "apps"],
+  "properties": {
+    "version": { "type": "integer", "minimum": 1 },
+    "apps": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/app" }
+    }
+  },
+  "$defs": {
+    "app": {
+      "type": "object",
+      "required": ["id", "slug", "title", "packs"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "slug": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+        "title": { "type": "string" },
+        "summary": { "type": "string" },
+        "packs": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/pack" }
+        }
+      }
+    },
+    "pack": {
+      "type": "object",
+      "required": ["id", "slug", "kind", "title", "chapters"],
+      "properties": {
+        "id": { "type": "string" },
+        "slug": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+        "kind": { "enum": ["technical", "functional", "usage"] },
+        "title": { "type": "string" },
+        "summary": { "type": "string" },
+        "chapters": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/chapter" }
+        }
+      }
+    },
+    "chapter": {
+      "type": "object",
+      "required": ["id", "slug", "title", "status", "version", "order", "blocks"],
+      "properties": {
+        "id": { "type": "string" },
+        "slug": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+        "title": { "type": "string" },
+        "summary": { "type": "string" },
+        "status": { "enum": ["draft", "published"] },
+        "version": { "type": "integer", "minimum": 1 },
+        "updatedAt": { "type": "string", "format": "date-time" },
+        "order": { "type": "integer", "minimum": 0 },
+        "blocks": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/block" }
+        }
+      }
+    },
+    "block": {
+      "type": "object",
+      "required": ["id", "type"],
+      "properties": {
+        "id": { "type": "string" },
+        "type": {
+          "enum": [
+            "prose",
+            "callout",
+            "checklist",
+            "code",
+            "image",
+            "deepLink",
+            "divider"
+          ]
+        },
+        "markdown": { "type": "string" },
+        "tone": { "enum": ["note", "warn", "tip"] },
+        "items": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "language": { "type": "string" },
+        "code": { "type": "string" },
+        "src": { "type": "string" },
+        "alt": { "type": "string" },
+        "href": { "type": "string" },
+        "label": { "type": "string" }
+      }
+    }
+  }
+}

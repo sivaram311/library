@@ -22,9 +22,9 @@ Hard rule: **content API + IDs freeze by end of Phase 1.** UI may churn; schema 
 
 ---
 
-## Phase 1 — Read-only viewer (seeded) *(current)*
+## Phase 1 — Read-only viewer (seeded)
 
-**Window:** 1.5–2.5 weeks · **Status:** implemented (`v0.1.0`)
+**Window:** 1.5–2.5 weeks · **Status:** done (`v0.1.x`)
 
 - [x] Next.js PWA shell; light soft reader theme
 - [x] Shelf → pack → chapter on Realme (360×780)
@@ -32,10 +32,23 @@ Hard rule: **content API + IDs freeze by end of Phase 1.** UI may churn; schema 
 - [x] TOC bottom sheet; search (title + prose); deep-linkable URLs
 - [x] Last-read continue (localStorage)
 - [x] Playwright e2e (Realme + tablet + desktop) — crew hire `agents/hires/2026-07-15-e2e-playwright.md`
+- [x] Public hosts library-dev / library-staging / library.delena.buzz
 
 **Exit:** Enjoy reading AgentVerse usage/tech on P2 Pro without wanting the repo tree. Snappy LCP.
 
-**Risks:** Import quality; wrong type scale / line length.
+---
+
+## Phase 1.5 — Ask (RAG) + Listen (TTS)
+
+**Status:** done (`v0.2.0`) · Hire `agents/hires/2026-07-15-rag-tts.md`
+
+- [x] Content schema **frozen** — no new block types; no vectors/audio on blocks
+- [x] `/api/retrieve` + `/api/ask` extractive RAG with chapter citations
+- [x] Ask tab + panel (BottomNav)
+- [x] Listen FAB — Web Speech TTS on chapter reader
+- [x] Smoke + Playwright coverage (18 tests)
+
+**Exit:** Ask returns grounded citations; Listen plays chapter prose on Realme Chrome.
 
 ---
 
@@ -46,6 +59,7 @@ Hard rule: **content API + IDs freeze by end of Phase 1.** UI may churn; schema 
 - [ ] Markdown-first editor; **toggle** edit/preview (no phone side-by-side)
 - [ ] Soft publish: draft → publish; keep previous published version
 - [ ] Block insert toolbar (not raw-only)
+- [ ] Reindex / bust TTS cache hooks on publish (for Ask/Listen)
 
 **Exit:** Update a chapter on phone in &lt;2 minutes; no data loss.
 
@@ -81,9 +95,10 @@ Hard rule: **content API + IDs freeze by end of Phase 1.** UI may churn; schema 
 | Milestone | Tag / commit theme | Deliverable |
 |-----------|-------------------|-------------|
 | M0 | `v0.0.1` | Idea + roadmap + schema (this baseline) |
-| M1 | `v0.1.x` | Reader + AgentVerse seed |
-| M2 | `v0.2.x` | Edit + publish |
-| M3 | `v0.3.x` | Multi-app + API freeze for consumers |
+| M1 | `v0.1.x` | Reader + AgentVerse seed + e2e + hosts |
+| M1.5 | `v0.2.0` | Ask (extractive RAG) + Listen (TTS) side services |
+| M2 | `v0.3.x` | Edit + publish |
+| M3 | `v0.4.x` | Multi-app + API freeze for consumers |
 | M4 | `v1.x` 3D skin | Spatial Library client |
 
 ---

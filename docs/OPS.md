@@ -60,11 +60,16 @@ npx playwright test --project=desktop-1280
 
 WebServer reuses `:3330` if already up (`reuseExistingServer`). Prefer a fresh build after UI changes.
 
-## Content refresh
+## Ask / Listen (v0.2.0)
 
-```powershell
-npm run seed   # rebuilds content/library.json from AgentVerse markdown
-```
+| Surface | How |
+|---------|-----|
+| Ask UI | https://library-dev.delena.buzz/ask |
+| Ask API | `POST/GET /api/ask?q=` — extractive; citations only from published chapters |
+| Retrieve API | `POST/GET /api/retrieve?q=` |
+| Listen | Chapter reader FAB (Web Speech); schema unchanged |
+
+Schema (`schema/content.schema.json`) stays frozen — no embeddings/audio fields on blocks.
 
 ## Auth
 

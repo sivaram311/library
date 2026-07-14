@@ -11,14 +11,32 @@ async function check(path, expect = 200) {
 async function main() {
   await check("/");
   await check("/search");
+  await check("/ask");
   await check("/agentverse");
   await check("/agentverse/usage");
-  // first chapter may vary — hit a known-stable slug from seed titles
   const res = await fetch(`${base}/agentverse/usage`);
   const html = await res.text();
   const m = html.match(/href="(\/agentverse\/usage\/[^"]+)"/);
   if (!m) throw new Error("no usage chapter links on pack page");
   await check(m[1]);
+
+  const ask = await fetch(`${base}/api/ask?q=${encodeURIComponent("desk")}`);
+  if (!ask.ok) throw new Error(`/api/ask → ${ask.status}`);
+  const askJson = await ask.json();
+  if (!askJson.mode || !Array.isArray(askJson.citations)) {
+    throw new Error("/api/ask bad shape");
+  }
+  if (askJson.citations.length && !askJson.citations[0].href?.startsWith("/")) {
+    throw new Error("/api/ask citation href invalid");
+  }
+  console.log(`OK ask citations=${askJson.citations.length}`);
+
+  const retrieve = await fetch(`${base}/api/retrieve?q=${encodeURIComponent("session")}`);
+  if (!retrieve.ok) throw new Error(`/api/retrieve → ${retrieve.status}`);
+  const retJson = await retrieve.json();
+  if (!Array.isArray(retJson.hits)) throw new Error("/api/retrieve bad shape");
+  console.log(`OK retrieve hits=${retJson.hits.length}`);
+
   console.log("SMOKE_PASS");
 }
 

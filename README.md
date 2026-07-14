@@ -10,7 +10,7 @@ Authored as a portable content graph → read beautifully on **Realme P2 Pro** �
 | PREPROD | https://library-staging.delena.buzz | **4330** | `F:\apps\library` (promote later) |
 | PROD | https://library.delena.buzz | **5330** | `G:\apps\library` (promote later) |
 
-- **Version:** `0.1.0` (Phase 1 read-only viewer)
+- **Version:** `0.2.0` (Ask RAG + Listen TTS side services)
 - **app-id:** `library`
 - **Repo:** https://github.com/sivaram311/library
 - **Primary device SoT:** `E:\MyAgent\workflow\devices\REALME-P2-PRO.md` (viewport **360×780**)
@@ -41,6 +41,12 @@ npm run e2e      # Playwright: Realme + tablet + desktop
 | [docs/MOBILE.md](docs/MOBILE.md) | Realme UX |
 | [docs/OPS.md](docs/OPS.md) | Ports / smoke |
 
+## Phase 1.5 features
+
+- **Ask** tab — extractive RAG over published chapters (`/api/ask`, `/api/retrieve`)
+- **Listen** FAB — browser Web Speech TTS (no schema pollution)
+- Citations deep-link to `/[app]/[pack]/[chapter]`
+
 ## Phase 1 features
 
 - Shelf → pack → chapter routes (`/[app]/[pack]/[chapter]`)
@@ -52,4 +58,4 @@ npm run e2e      # Playwright: Realme + tablet + desktop
 
 ## Next
 
-Phase 2 — markdown editor + draft/publish (see roadmap).
+Phase 2 — on-phone markdown edit + draft/publish (see roadmap).

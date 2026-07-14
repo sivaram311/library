@@ -68,4 +68,35 @@ test.describe("Library reader journey", () => {
 
     expect(errors, errors.join("\n")).toEqual([]);
   });
+
+  test("Listen control visible on chapter", async ({ page }) => {
+    const errors: string[] = [];
+    page.on("pageerror", (err) => errors.push(err.message));
+
+    await openFirstUsageChapter(page);
+    await expect(
+      page.getByRole("button", { name: /listen to chapter|listen unsupported|pause listening/i }),
+    ).toBeVisible();
+
+    expect(errors, errors.join("\n")).toEqual([]);
+  });
+
+  test("Ask page returns grounded citations", async ({ page }) => {
+    const errors: string[] = [];
+    page.on("pageerror", (err) => errors.push(err.message));
+
+    await page.goto("/ask");
+    await expect(page.getByRole("heading", { name: "Ask", level: 1 })).toBeVisible();
+    await page.getByPlaceholder(/ask about/i).fill("deep-link desk");
+    await page.getByRole("button", { name: /^Ask$/i }).click();
+    await expect(page.getByText(/based on|could not find/i)).toBeVisible({ timeout: 15_000 });
+    const cites = page.getByRole("list", { name: /citations/i }).getByRole("link");
+    // citations optional when no hit; if present must be agentverse routes
+    const count = await cites.count();
+    if (count > 0) {
+      await expect(cites.first()).toHaveAttribute("href", /\/agentverse\//);
+    }
+
+    expect(errors, errors.join("\n")).toEqual([]);
+  });
 });

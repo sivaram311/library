@@ -3,7 +3,9 @@
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import { BlockView } from "./BlockView";
+import { ListenControls } from "./ListenControls";
 import { TocSheet, type TocItem } from "./TocSheet";
+import { chapterSpeakText } from "@/lib/text";
 import type { Block } from "@/lib/types";
 
 const LAST_READ_KEY = "library:last-read";
@@ -35,6 +37,7 @@ export function ChapterReader({
 }) {
   const [tocOpen, setTocOpen] = useState(false);
   const closeToc = useCallback(() => setTocOpen(false), []);
+  const speakText = chapterSpeakText(title, blocks);
 
   useEffect(() => {
     try {
@@ -93,6 +96,8 @@ export function ChapterReader({
           <span />
         )}
       </footer>
+
+      <ListenControls text={speakText} />
 
       <button
         type="button"

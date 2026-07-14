@@ -4,8 +4,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const items = [
-  { href: "/", label: "Library", match: (p: string) => p === "/" || !p.startsWith("/search") },
+  { href: "/", label: "Library", match: (p: string) => p === "/" || (!p.startsWith("/search") && !p.startsWith("/ask")) },
   { href: "/search", label: "Search", match: (p: string) => p.startsWith("/search") },
+  { href: "/ask", label: "Ask", match: (p: string) => p.startsWith("/ask") },
 ] as const;
 
 export function BottomNav() {

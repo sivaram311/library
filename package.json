@@ -1,11 +1,34 @@
 {
   "name": "library",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": true,
-  "description": "Phone-first Library for app technical/functional/usage docs (Phase 0 docs baseline)",
+  "description": "Phone-first Library for app technical, functional, and usage docs",
   "scripts": {
-    "dev": "echo Phase 0: no server yet. See docs/ROADMAP.md — planned port 3330",
+    "dev": "next dev -H 0.0.0.0 -p 3330",
+    "build": "next build",
+    "start": "next start -H 0.0.0.0 -p 3330",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "seed": "node scripts/seed-agentverse.mjs",
+    "smoke": "node scripts/smoke.mjs",
     "check:schema": "node -e \"JSON.parse(require('fs').readFileSync('schema/content.schema.json','utf8')); console.log('schema ok')\""
+  },
+  "dependencies": {
+    "next": "^15.3.3",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.8",
+    "@types/node": "^22.15.21",
+    "@types/react": "^19.1.5",
+    "@types/react-dom": "^19.1.5",
+    "eslint": "^9.27.0",
+    "eslint-config-next": "^15.3.3",
+    "tailwindcss": "^4.1.8",
+    "typescript": "^5.8.3"
   },
   "engines": {
     "node": ">=20"

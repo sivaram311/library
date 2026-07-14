@@ -1,34 +1,53 @@
 # Library
 
-Phone-first **reader + soft CMS** for technical, functional, and usage docs of apps built in this workspace.
+Phone-first **reader** for technical, functional, and usage docs of apps built in this workspace.
 
-Authored once as a portable content graph → read beautifully on **Realme P2 Pro** → later inhabited as a **3D game library** (AgentVerse-class skin on the same API).
+Authored as a portable content graph → read beautifully on **Realme P2 Pro** → later a **3D game library** skin on the same API.
 
 | Env | Path / URL | Port |
 |-----|------------|------|
-| DEV | `E:\MyWorkspace\sandbox\library` | **3330** (reserved) |
-| PREPROD | planned | **4330** (reserved) |
-| PROD | planned | **5330** (reserved) |
+| DEV | `E:\MyWorkspace\sandbox\library` | **3330** |
+| PREPROD | planned | **4330** |
+| PROD | planned | **5330** |
 
-- **Version:** `0.0.1` (Phase 0 — idea + roadmap + schema)
+- **Version:** `0.1.0` (Phase 1 read-only viewer)
 - **app-id:** `library`
 - **Repo:** https://github.com/sivaram311/library
 - **Primary device SoT:** `E:\MyAgent\workflow\devices\REALME-P2-PRO.md` (viewport **360×780**)
+
+## Run
+
+```powershell
+cd E:\MyWorkspace\sandbox\library
+npm install
+npm run seed    # recompile AgentVerse markdown → content/library.json
+npm run dev     # http://127.0.0.1:3330
+```
+
+```powershell
+npm run build
+npm start
+npm run smoke
+```
 
 ## Docs
 
 | Doc | Topic |
 |-----|--------|
-| [docs/IDEA.md](docs/IDEA.md) | Product north star + what it is / is not |
-| [docs/ROADMAP.md](docs/ROADMAP.md) | Phased delivery 0→4 |
+| [docs/IDEA.md](docs/IDEA.md) | Product north star |
+| [docs/ROADMAP.md](docs/ROADMAP.md) | Phases 0→4 |
 | [docs/CONTENT-SCHEMA.md](docs/CONTENT-SCHEMA.md) | App → Pack → Chapter → Block |
-| [docs/MOBILE.md](docs/MOBILE.md) | Realme UX (points at machine SoT) |
-| [docs/OPS.md](docs/OPS.md) | Ports / smoke / promote notes |
+| [docs/MOBILE.md](docs/MOBILE.md) | Realme UX |
+| [docs/OPS.md](docs/OPS.md) | Ports / smoke |
 
-## Status
+## Phase 1 features
 
-Phase **0** complete in-repo. Implementation (Next.js PWA reader) starts at Phase **1** per roadmap.
+- Shelf → pack → chapter routes (`/[app]/[pack]/[chapter]`)
+- Soft light reader theme (Fraunces + Source Sans 3)
+- TOC bottom sheet · global search · continue last-read
+- AgentVerse seeded into Usage / Functional / Technical packs
+- PWA manifest (installable shell)
 
-## Machine rules
+## Next
 
-Follow `E:\MyAgent\workflow\CONSCIOUS.md`. Reserve ports before bind. Auth via CSS when auth ships. Log activity for meaningful work.
+Phase 2 — markdown editor + draft/publish (see roadmap).

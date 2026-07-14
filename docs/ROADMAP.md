@@ -8,29 +8,29 @@ Hard rule: **content API + IDs freeze by end of Phase 1.** UI may churn; schema 
 
 ---
 
-## Phase 0 — Vision / IA *(current)*
+## Phase 0 — Vision / IA
 
-**Window:** 3–5 days · **Status:** in-repo baseline
+**Window:** 3–5 days · **Status:** done (`v0.0.1`)
 
 - [x] Product name + north star (`docs/IDEA.md`)
 - [x] Content graph + block types (`docs/CONTENT-SCHEMA.md`, `schema/content.schema.json`)
 - [x] URL scheme: `/[app]/[pack]/[chapter]`
 - [x] Port reservation + sandbox registry
-- [ ] Inventory AgentVerse markdown → proposed packs/chapters (next)
+- [x] Inventory AgentVerse markdown → packs/chapters via `npm run seed`
 
 **Exit:** EM/builder agree “this survives 3D.”
 
 ---
 
-## Phase 1 — Read-only viewer (seeded)
+## Phase 1 — Read-only viewer (seeded) *(current)*
 
-**Window:** 1.5–2.5 weeks
+**Window:** 1.5–2.5 weeks · **Status:** implemented (`v0.1.0`)
 
-- [ ] Next.js PWA shell; light soft reader theme
-- [ ] Shelf → pack → chapter on Realme (360×780)
-- [ ] Seed AgentVerse docs (MD → structured JSON; imperfect OK)
-- [ ] TOC bottom sheet; search (title + prose); deep-linkable URLs
-- [ ] Optional: offline cache of last-read chapter
+- [x] Next.js PWA shell; light soft reader theme
+- [x] Shelf → pack → chapter on Realme (360×780)
+- [x] Seed AgentVerse docs (MD → structured JSON; imperfect OK)
+- [x] TOC bottom sheet; search (title + prose); deep-linkable URLs
+- [x] Last-read continue (localStorage)
 
 **Exit:** Enjoy reading AgentVerse usage/tech on P2 Pro without wanting the repo tree. Snappy LCP.
 

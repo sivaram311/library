@@ -1,0 +1,1026 @@
+{
+  "version": 1,
+  "apps": [
+    {
+      "id": "agentverse",
+      "slug": "agentverse",
+      "title": "AgentVerse",
+      "summary": "3D multi-agent office — Session Desk, deep-links, quests, Realme PWA.",
+      "packs": [
+        {
+          "id": "ee583407f042",
+          "slug": "usage",
+          "kind": "usage",
+          "title": "Usage",
+          "summary": "How to run, operate, and deep-link AgentVerse day to day.",
+          "chapters": [
+            {
+              "id": "06d039b7a278",
+              "slug": "agentverse-3d-multi-agent-office-workplace",
+              "title": "AgentVerse - 3D Multi-Agent Office Workplace",
+              "summary": "Next.js + React Three Fiber **Tamil Nadu digital office** — agents sit at desks, walk over when summoned, and talk via the Agent Portal API ",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.864Z",
+              "order": 0,
+              "blocks": [
+                {
+                  "id": "1c12861aa922",
+                  "type": "prose",
+                  "markdown": "Next.js + React Three Fiber **Tamil Nadu digital office** — agents sit at desks, walk over when summoned, and talk via the Agent Portal API at `:8080`.\n\n**DEV train:** `feature/upgradation-functionality` · **0.3.0** (from `v0.2.2-stable`). Classic PREPROD/PROD stay on prior ship until Q1/Q2."
+                }
+              ]
+            },
+            {
+              "id": "fcbd9f6676ca",
+              "slug": "office-crew",
+              "title": "Office crew",
+              "summary": "| Rajesh | Orchestrator (Office Lead) |",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.866Z",
+              "order": 1,
+              "blocks": [
+                {
+                  "id": "8b8cf80e61a0",
+                  "type": "prose",
+                  "markdown": "| Name | Role |\n|------|------|\n| Rajesh | Orchestrator (Office Lead) |\n| Karthik | Research |\n| Lavanya | Creative |\n| Aravind | Coder |\n| Meenakshi | Companion |\n| Muthu | Project Manager |\n| Kabilan | Device Lab QA (Chrome DevTools) |\n\nGreetings default to **Tamil** (`ta-IN`); switch Hindi / English in the top bar.  \nPrompts & routing: `src/prompts/personas.json`  \nCrew / pre-work: `agents/`"
+                }
+              ]
+            },
+            {
+              "id": "c0c7e19b3195",
+              "slug": "features",
+              "title": "Features",
+              "summary": "Mandala office floor, holographic desks, work-loop animations",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.866Z",
+              "order": 2,
+              "blocks": [
+                {
+                  "id": "cb5deab3a624",
+                  "type": "prose",
+                  "markdown": "- Mandala office floor, holographic desks, work-loop animations\n- Click agent → stand → walk → greet → chat → return to desk\n- Multi-project desk clusters (ask Rajesh: `new project: …`)\n- Per-directory portal sessions (workspace picker + session tabs)\n- **Session Desk** — search / filter / create / archive / restore / **cancel run**\n- **Deep-links** — `/desk?intent=&crew=&brief=&return=` ([docs/DEEP-LINK-CONTRACT.md](docs/DEEP-LINK-CONTRACT.md))\n- Quests bound to portal session status; incident brief strip on hire"
+                }
+              ]
+            },
+            {
+              "id": "5483c4d4a272",
+              "slug": "prerequisites",
+              "title": "Prerequisites",
+              "summary": "Node.js 22+ (host has 24.x)",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.866Z",
+              "order": 3,
+              "blocks": [
+                {
+                  "id": "5a41aed3d2f5",
+                  "type": "prose",
+                  "markdown": "- Node.js 22+ (host has 24.x)\n- Agent Portal backend running on `http://127.0.0.1:8080`\n- CSS on `:9000` when `cssEnabled` (DEV login: `admin` / `admin123`)\n- **PREPROD/PROD login:** CSS admin password from `G:\\apps\\css\\.env` (`CSS_ADMIN_PASSWORD`) — not `admin123` (staging returns 401)"
+                }
+              ]
+            },
+            {
+              "id": "17bc424a22f4",
+              "slug": "dev-port-3310-reserved",
+              "title": "Dev (port **3310** reserved)",
+              "summary": "cd E:\\MyWorkspace\\agentverse-project",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.866Z",
+              "order": 4,
+              "blocks": [
+                {
+                  "id": "913e05668cf7",
+                  "type": "prose",
+                  "markdown": "```powershell\ncd E:\\MyWorkspace\\agentverse-project\ncopy .env.example .env.local\nnpm run dev:stack\n# Or UI only: npm run dev\n```\n\nOpen `http://127.0.0.1:3310`.\n\nPREPROD: https://agentverse-staging.delena.buzz (`F:\\apps\\agentverse` :4310).  \nPROD: https://agentverse.delena.buzz (`G:\\apps\\agentverse` :5310)."
+                }
+              ]
+            },
+            {
+              "id": "5bb2077716f5",
+              "slug": "docs",
+              "title": "Docs",
+              "summary": "`docs/IMPLEMENTATION-GUIDE.md`",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.866Z",
+              "order": 5,
+              "blocks": [
+                {
+                  "id": "34ccf591f9ea",
+                  "type": "prose",
+                  "markdown": "- `docs/IMPLEMENTATION-GUIDE.md`\n- `docs/OPS.md`\n- `docs/DEEP-LINK-CONTRACT.md`\n- `docs/PROMOTE-UPGRADATION.md`\n- `docs/HANDOFF.md`\n- `agents/roles/office-crew.md`"
+                }
+              ]
+            },
+            {
+              "id": "dd42be48065e",
+              "slug": "agentverse-ops-upgradation-side-fleet",
+              "title": "AgentVerse — Ops (upgradation side fleet)",
+              "summary": "Branch:** `feature/upgradation-functionality` · **Version:** **0.3.1** · Base `v0.2.2-stable`",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.867Z",
+              "order": 6,
+              "blocks": [
+                {
+                  "id": "c5726ae818e7",
+                  "type": "prose",
+                  "markdown": "**Branch:** `feature/upgradation-functionality` · **Version:** **0.3.1** · Base `v0.2.2-stable`\n\n**This fleet must NOT recycle classic or v2 ports.**\n\n| Env | Drive | Port | Path | Host |\n|-----|-------|------|------|------|\n| DEV | E:\\MyWorkspace\\agentverse-project | **3312** | repo | http://127.0.0.1:3312 |\n| PREPROD | F:\\apps\\agentverse-upgrade | **4312** | side | https://agentverse-upgrade-staging.delena.buzz |\n| PROD | G:\\apps\\agentverse-upgrade | **5312** | side | https://agentverse-upgrade.delena.buzz |"
+                }
+              ]
+            },
+            {
+              "id": "535df728ebc4",
+              "slug": "untouched-fleets",
+              "title": "Untouched fleets",
+              "summary": "| Fleet | Ports | Hosts |",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.867Z",
+              "order": 7,
+              "blocks": [
+                {
+                  "id": "5002a4058bfc",
+                  "type": "prose",
+                  "markdown": "| Fleet | Ports | Hosts |\n|-------|-------|-------|\n| Classic | 3310 / 4310 / 5310 | agentverse[-staging].delena.buzz |\n| stable-v2 | 3311 / 4311 / 5311 | agentverse-v2[-staging].delena.buzz |"
+                }
+              ]
+            },
+            {
+              "id": "ad1babbe31a9",
+              "slug": "auth-api",
+              "title": "Auth / API",
+              "summary": "CSS: `:5900` / `https://css.delena.buzz` — bake `NEXT_PUBLIC_CSS_ISSUER=https://css.delena.buzz`",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.867Z",
+              "order": 8,
+              "blocks": [
+                {
+                  "id": "c366aaa9a50d",
+                  "type": "prose",
+                  "markdown": "- CSS: `:5900` / `https://css.delena.buzz` — bake `NEXT_PUBLIC_CSS_ISSUER=https://css.delena.buzz`\n- Portal PREPROD `:4080` · PROD `:5080`\n- clientId: `agent-portal` (shared)"
+                }
+              ]
+            },
+            {
+              "id": "d195571d2566",
+              "slug": "start",
+              "title": "Start",
+              "summary": "cd F:\\apps\\agentverse-upgrade",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.867Z",
+              "order": 9,
+              "blocks": [
+                {
+                  "id": "f951157409a8",
+                  "type": "prose",
+                  "markdown": "```powershell\ncd F:\\apps\\agentverse-upgrade\n.\\start.ps1 -EnvName preprod\n\ncd G:\\apps\\agentverse-upgrade\n.\\start.ps1 -EnvName prod\n```"
+                }
+              ]
+            },
+            {
+              "id": "ccf65b41d900",
+              "slug": "deep-links",
+              "title": "Deep-links",
+              "summary": "See [DEEP-LINK-CONTRACT.md](./DEEP-LINK-CONTRACT.md). Prefer upgrade hosts for Dispatch return URLs when targeting this fleet.",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.867Z",
+              "order": 10,
+              "blocks": [
+                {
+                  "id": "c2bf5df1de82",
+                  "type": "prose",
+                  "markdown": "See [DEEP-LINK-CONTRACT.md](./DEEP-LINK-CONTRACT.md). Prefer upgrade hosts for Dispatch return URLs when targeting this fleet."
+                }
+              ]
+            },
+            {
+              "id": "1cb20b568ae2",
+              "slug": "promote",
+              "title": "Promote",
+              "summary": "[PROMOTE-UPGRADATION.md](./PROMOTE-UPGRADATION.md) · Evidence `H:\\releases\\agentverse-upgrade-0.3.0\\`",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.867Z",
+              "order": 11,
+              "blocks": [
+                {
+                  "id": "d1ef28537848",
+                  "type": "prose",
+                  "markdown": "[PROMOTE-UPGRADATION.md](./PROMOTE-UPGRADATION.md) · Evidence `H:\\releases\\agentverse-upgrade-0.3.0\\`"
+                }
+              ]
+            },
+            {
+              "id": "fd5f9e4fb6df",
+              "slug": "agentverse-proddeck-deep-link-contract",
+              "title": "AgentVerse ↔ ProdDeck Deep-Link Contract",
+              "summary": "Status:** Frozen for Upgradation 0.2.4+",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.867Z",
+              "order": 12,
+              "blocks": [
+                {
+                  "id": "cdc9c704493f",
+                  "type": "prose",
+                  "markdown": "**Status:** Frozen for Upgradation 0.2.4+  \n**Hosts:** classic `agentverse.delena.buzz` / `agentverse-staging.delena.buzz` / DEV `:3310`  \n**Keep compatible:** `/?session=<id>`"
+                }
+              ]
+            },
+            {
+              "id": "ef5b7164d434",
+              "slug": "canonical-url",
+              "title": "Canonical URL",
+              "summary": "/desk?src=&crew=&session=&intent=&brief=&skills=&return=&env=&evidence=",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.867Z",
+              "order": 13,
+              "blocks": [
+                {
+                  "id": "2cd59e0f6ea6",
+                  "type": "prose",
+                  "markdown": "```\n/desk?src=&crew=&session=&intent=&brief=&skills=&return=&env=&evidence=\n```\n\n| Param | Meaning |\n|-------|---------|\n| `src` | Caller id (e.g. `proddeck`) |\n| `crew` | Persona id: `rajesh` … `kabilan` |\n| `session` | Portal session UUID |\n| `intent` | `session-desk` \\| `hire` |\n| `brief` | URL-encoded incident/hire text |\n| `skills` | Comma skills (informational; future tabs) |\n| `return` | Absolute URL back to Home/Watch — **allowlisted hosts only** |\n| `env` | Hint `dev` / `preprod` / `prod` |\n| `evidence` | Optional path/string for strip |\n\n**Brief decode:** AV accepts URI brief (canonical) and legacy base64url during transition."
+                }
+              ]
+            },
+            {
+              "id": "1040e869e96c",
+              "slug": "security",
+              "title": "Security",
+              "summary": "`return` must resolve to host in: `localhost`, `127.0.0.1`, `home.delena.buzz`, `home-staging.delena.buzz`, `agentverse.delena.buzz`, `agent",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.867Z",
+              "order": 14,
+              "blocks": [
+                {
+                  "id": "8c1ca752f933",
+                  "type": "prose",
+                  "markdown": "`return` must resolve to host in: `localhost`, `127.0.0.1`, `home.delena.buzz`, `home-staging.delena.buzz`, `agentverse.delena.buzz`, `agentverse-staging.delena.buzz`. Others → ignored."
+                }
+              ]
+            },
+            {
+              "id": "0ae89f2c8c17",
+              "slug": "behavior",
+              "title": "Behavior",
+              "summary": "After CSS auth, AV parses query.",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.867Z",
+              "order": 15,
+              "blocks": [
+                {
+                  "id": "6d5533dc1b60",
+                  "type": "prose",
+                  "markdown": "1. After CSS auth, AV parses query.\n2. `intent=session-desk` → open Session Desk.\n3. `intent=hire` → select crew, open chat, seed compose from brief.\n4. Brief → Incident strip (dismissible) + compose prefills `Investigate: …`.\n5. `src=proddeck` → Incident strip banner **“ProdDeck dispatch params received”** even if `brief` empty (chat opens so strip is visible).\n6. Safe `return` → “Back to Home” in chat/TopBar/IncidentStrip.\n\nProdDeck Dispatch must match this schema."
+                }
+              ]
+            },
+            {
+              "id": "720c5c833520",
+              "slug": "handoff-upgradation-side-fleet",
+              "title": "HANDOFF — Upgradation side fleet",
+              "summary": "Branch:** `feature/upgradation-functionality` · **Version:** **0.3.1 LIVE**",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.868Z",
+              "order": 16,
+              "blocks": [
+                {
+                  "id": "14013522efaf",
+                  "type": "prose",
+                  "markdown": "**When:** 2026-07-15  \n**Branch:** `feature/upgradation-functionality` · **Version:** **0.3.1 LIVE**  \n**Side ports:** **3312 / 4312 / 5312**  \n**Hosts:** https://agentverse-upgrade-staging.delena.buzz · https://agentverse-upgrade.delena.buzz"
+                }
+              ]
+            },
+            {
+              "id": "f06ec2e447f1",
+              "slug": "live",
+              "title": "Live",
+              "summary": "Q1+Q2 side fleet **0.3.1** SMOKE_PASS (parallel subagent promote)",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.868Z",
+              "order": 17,
+              "blocks": [
+                {
+                  "id": "1c2521331e59",
+                  "type": "prose",
+                  "markdown": "- Q1+Q2 side fleet **0.3.1** SMOKE_PASS (parallel subagent promote)\n- Evidence: `H:\\releases\\agentverse-upgrade-0.3.1\\`\n- Classic / v2 not overwritten"
+                }
+              ]
+            },
+            {
+              "id": "90e05b09b465",
+              "slug": "0-3-1-leftovers-shipped",
+              "title": "0.3.1 leftovers (shipped)",
+              "summary": "Durable projects · WebGL FlatRoster · planMarkdown/PWA · ProdDeck Dispatch → upgrade hosts",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.868Z",
+              "order": 18,
+              "blocks": [
+                {
+                  "id": "1c0d089a07eb",
+                  "type": "prose",
+                  "markdown": "Durable projects · WebGL FlatRoster · planMarkdown/PWA · ProdDeck Dispatch → upgrade hosts"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "c88963e1d7bd",
+          "slug": "functional",
+          "kind": "functional",
+          "title": "Functional",
+          "summary": "What the product does — journeys, vision, upgradation behavior.",
+          "chapters": [
+            {
+              "id": "1768d891d1df",
+              "slug": "01-vision-walkthrough",
+              "title": "01 - Vision Walkthrough",
+              "summary": "Project:** AgentVerse",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.868Z",
+              "order": 0,
+              "blocks": [
+                {
+                  "id": "4c07d0f0ccce",
+                  "type": "prose",
+                  "markdown": "**Project:** AgentVerse  \n**Date:** 2026-07-12  \n**Crew Lead:** Cursor CLI  \n**Sources:** User requirements markdown; agent-portal migration; `E:\\machine-docs\\personas`"
+                }
+              ]
+            },
+            {
+              "id": "1eded9c76559",
+              "slug": "end-to-end-overview",
+              "title": "End-to-End Overview",
+              "summary": "AgentVerse is the **Next.js + R3F/Three.js** successor shell that **migrates Agent Portal capabilities** (`https://github.com/sivaram311/age",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.868Z",
+              "order": 1,
+              "blocks": [
+                {
+                  "id": "a607f948d522",
+                  "type": "prose",
+                  "markdown": "AgentVerse is the **Next.js + R3F/Three.js** successor shell that **migrates Agent Portal capabilities** (`https://github.com/sivaram311/agent-portal.git` — local SoT `E:\\MyWorkspace\\agent-portal`, mirror `agent-portal-ref`) into a **3D gaming hub**: lobby, quests/missions, animated Indian personas, PWA on Realme P2 Pro / Pad 2 / desktop.\n\n**Orchestrator:** Rajveer routes tasks to Aarav (Research), Priya (Creative), Arjun (Coder), Meera (Companion) using `personas.json` prompts (aligned with `E:\\machine-docs\\personas` + app prompts).\n\nMachine gates remain: CSS auth, port registry, schema-per-env, promote evidence."
+                }
+              ]
+            },
+            {
+              "id": "736a68f71bb3",
+              "slug": "user-journeys-flows",
+              "title": "User Journeys / Flows",
+              "summary": "Enter the verse** — `npm run dev` / PWA → CSS login → 3D hub lobby.",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.868Z",
+              "order": 2,
+              "blocks": [
+                {
+                  "id": "c9f61c1cf8b6",
+                  "type": "prose",
+                  "markdown": "1. **Enter the verse** — `npm run dev` / PWA → CSS login → 3D hub lobby.\n2. **Meet personas** — Rajveer / Aarav / Priya / Arjun / Meera (low-poly + LOD); tap/click → chat / mission assign.\n3. **Quest / orchestrated task** — User goal → Rajveer routes to sub-agent(s) via prompts → progress as missions in HUD + avatar animation.\n4. **Migrated portal flows** — Sessions, streaming, sub-agents, permissions, history/changes — gamified in 3D (API reuse vs reimplement TBD).\n5. **Multi-device** — Touch orbit on phone/tablet; mouse on desktop; low-poly + LOD.\n6. **Edge cases:** WebGL fail → 2D roster; auth fail; offline PWA shell."
+                }
+              ]
+            },
+            {
+              "id": "e8a61ed829ce",
+              "slug": "success-metrics",
+              "title": "Success Metrics",
+              "summary": "`npm install && npm run dev` boots the 3D lobby.",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.868Z",
+              "order": 3,
+              "blocks": [
+                {
+                  "id": "da2ad0556ef2",
+                  "type": "prose",
+                  "markdown": "- `npm install && npm run dev` boots the 3D lobby.\n- Five named personas interactive; Rajveer routes to others.\n- Usable on Realme P2 Pro, Pad 2, desktop (PWA).\n- Core agent-portal capabilities reachable or clearly phased with migration map.\n- Production-ready: SemVer, health, CSS, reserved port, structured logs, Playwright smoke."
+                }
+              ]
+            },
+            {
+              "id": "705a68ca6617",
+              "slug": "non-functional-requirements",
+              "title": "Non-Functional Requirements",
+              "summary": "Stack:** Next.js + React Three Fiber / Three.js (locked).",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.868Z",
+              "order": 4,
+              "blocks": [
+                {
+                  "id": "2f4bfb867972",
+                  "type": "prose",
+                  "markdown": "- **Stack:** Next.js + React Three Fiber / Three.js (locked).\n- **Auth:** CSS (`:9000` DEV) — CONSCIOUS #8.\n- **Ports:** Reserve before bind (`E:\\MyAgent\\workflow\\ports\\REGISTRY.md`).\n- **DB:** Prefer reuse/adapt agent-portal persistence where practical.\n- **Perf:** Low-poly models, LOD, touch/mouse controls.\n- **Mobile QA:** Realme frames + `web-playwright-checklist.md`.\n- **Drive:** DEV on E: only."
+                }
+              ]
+            },
+            {
+              "id": "18a79d9c78f5",
+              "slug": "risks-dependencies",
+              "title": "Risks & Dependencies",
+              "summary": "| Risk | Mitigation |",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.868Z",
+              "order": 5,
+              "blocks": [
+                {
+                  "id": "5fa8c9dda161",
+                  "type": "prose",
+                  "markdown": "| Risk | Mitigation |\n|------|------------|\n| Large agent-portal surface | Phased migration map in `02-architecture.md` |\n| Empty `public/models/` | Procedural/low-poly placeholders first |\n| Angular → Next rewrite | New UI; reuse Spring API where possible |\n| 3D perf on phone | LOD, reduced draw calls, fallback 2D |"
+                }
+              ]
+            },
+            {
+              "id": "25ebad6690fc",
+              "slug": "open-questions-narrow-for-go",
+              "title": "Open questions (narrow — for GO)",
+              "summary": "API strategy:** Call existing agent-portal backend `:8080` from Next.js, or reimplement API inside Next in phases?",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.868Z",
+              "order": 6,
+              "blocks": [
+                {
+                  "id": "d5f524340cb0",
+                  "type": "prose",
+                  "markdown": "1. **API strategy:** Call existing agent-portal backend `:8080` from Next.js, or reimplement API inside Next in phases?\n2. Explicit **GO** to scaffold after you confirm #1 (or accept default: **proxy/reuse `:8080` first**).\n\n**Mental Walkthrough:** Phone PWA → CSS → 3D lobby → talk to Rajveer → mission card → Arjun animates while coding stream fills HUD (portal session semantics under the hood)."
+                }
+              ]
+            },
+            {
+              "id": "1a0c97e08857",
+              "slug": "01-vision-stable-functional-upgradation",
+              "title": "01 — Vision: Stable Functional Upgradation",
+              "summary": "Initiative:** AgentVerse stable functional upgrade",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.868Z",
+              "order": 7,
+              "blocks": [
+                {
+                  "id": "45f660608a91",
+                  "type": "prose",
+                  "markdown": "**Initiative:** AgentVerse stable functional upgrade  \n**Base:** `v0.2.2-stable` · Branch: `feature/upgradation-functionality`  \n**Date:** 2026-07-15"
+                }
+              ]
+            },
+            {
+              "id": "d548a53a1a8a",
+              "slug": "goal",
+              "title": "Goal",
+              "summary": "Make the stable office a trustworthy **operator work plane**: Session Desk findability, portal status/cancel truth, deep-link hire from Prod",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.868Z",
+              "order": 8,
+              "blocks": [
+                {
+                  "id": "5cb9caa92d44",
+                  "type": "prose",
+                  "markdown": "Make the stable office a trustworthy **operator work plane**: Session Desk findability, portal status/cancel truth, deep-link hire from ProdDeck, honest quests, thin incident land — without restyling the 3D office."
+                }
+              ]
+            },
+            {
+              "id": "cc0507dc9d74",
+              "slug": "journeys",
+              "title": "Journeys",
+              "summary": "Operator finds any session (search/filter) → opens → sees live status → can cancel.",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.868Z",
+              "order": 9,
+              "blocks": [
+                {
+                  "id": "fab9b34faa07",
+                  "type": "prose",
+                  "markdown": "1. Operator finds any session (search/filter) → opens → sees live status → can cancel.\n2. Home Dispatch opens `/desk?...` → AV lands with desk/hire/brief → return to Home.\n3. Prompt creates a quest that tracks portal STREAMING/complete/fail — no fake %.\n4. WAITING_PERMISSION / WAITING_PLAN surfaces real controls or honest Portal fallback.\n5. Brief/incident strip on hire; dismiss; work continues in chat."
+                }
+              ]
+            },
+            {
+              "id": "615d2dfed28d",
+              "slug": "success-metrics-2",
+              "title": "Success metrics",
+              "summary": "Session findability · cancel/status match portal · deep-link hire+return · quest↔session · Realme smoke · other apps untouched on promote.",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.869Z",
+              "order": 10,
+              "blocks": [
+                {
+                  "id": "da2ad0556ef2",
+                  "type": "prose",
+                  "markdown": "Session findability · cancel/status match portal · deep-link hire+return · quest↔session · Realme smoke · other apps untouched on promote."
+                }
+              ]
+            },
+            {
+              "id": "3b88f0289d84",
+              "slug": "agentverse-implementation-guide",
+              "title": "AgentVerse — Implementation Guide",
+              "summary": "Status:** DEV **0.3.0** on `feature/upgradation-functionality` (base `v0.2.2-stable`). Classic PREPROD/PROD remain **0.2.x** until Q1/Q2.",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.869Z",
+              "order": 11,
+              "blocks": [
+                {
+                  "id": "0fb89f957067",
+                  "type": "prose",
+                  "markdown": "**Status:** DEV **0.3.0** on `feature/upgradation-functionality` (base `v0.2.2-stable`). Classic PREPROD/PROD remain **0.2.x** until Q1/Q2.  \n**Stack:** Next.js 15 + R3F / Three.js  \n**API:** agent-portal DEV `:8080` / PREPROD `:4080` / PROD `:5080`  \n**UI ports:** DEV **3310** · PREPROD **4310** · PROD **5310**  \n**Personas:** Rajesh, Karthik, Lavanya, Aravind, Meenakshi, Muthu, Kabilan (`src/prompts/personas.json`)"
+                }
+              ]
+            },
+            {
+              "id": "21f5ddc8c520",
+              "slug": "run",
+              "title": "Run",
+              "summary": "cd E:\\MyWorkspace\\agentverse-project",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.869Z",
+              "order": 12,
+              "blocks": [
+                {
+                  "id": "476e66d02771",
+                  "type": "prose",
+                  "markdown": "```powershell\n# DEV\ncd E:\\MyWorkspace\\agentverse-project\nnpm install\nnpm run dev          # or: npm run dev:stack\n\n# PREPROD / PROD — after promote GO only\ncd F:\\apps\\agentverse   # or G:\\apps\\agentverse\n.\\start.ps1 -EnvName preprod   # or prod\n```\n\nPublic URLs: [OPS.md](./OPS.md) · Deep-links: [DEEP-LINK-CONTRACT.md](./DEEP-LINK-CONTRACT.md) · Promote: [PROMOTE-UPGRADATION.md](./PROMOTE-UPGRADATION.md)"
+                }
+              ]
+            },
+            {
+              "id": "79d21eb3aca3",
+              "slug": "architecture",
+              "title": "Architecture",
+              "summary": "| App Router + health/proxies | `src/app` (+ `/desk` deep-link entry) |",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.869Z",
+              "order": 13,
+              "blocks": [
+                {
+                  "id": "0feb1ca11b17",
+                  "type": "prose",
+                  "markdown": "| Area | Path |\n|------|------|\n| App Router + health/proxies | `src/app` (+ `/desk` deep-link entry) |\n| TN office scene | `src/components/scene` |\n| HUD | `src/components/hud` (Session Desk, chat, quests, incident strip) |\n| Portal client | `src/lib/api.ts` via `/api/portal` |\n| Deep-links | `src/lib/session-share.ts` |\n| Orchestrator | `src/lib/orchestrator.ts` |\n| Office state | `src/lib/store.ts` (Zustand persist `agentverse-office-v2`; projects remain local flavor until durable conventions) |\n| Release launcher | `scripts/start-release.ps1` |"
+                }
+              ]
+            },
+            {
+              "id": "6041db03b551",
+              "slug": "upgradation-behavior-0-3-0",
+              "title": "Upgradation behavior (0.3.0)",
+              "summary": "Session Desk: search, status filters, cancel run, title-at-create.",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.869Z",
+              "order": 14,
+              "blocks": [
+                {
+                  "id": "c9078eef78b3",
+                  "type": "prose",
+                  "markdown": "1. Session Desk: search, status filters, cancel run, title-at-create.\n2. Busy resume: cancel-first then reuse; fork only as last resort.\n3. Quests bind `sessionId`; status from portal (no fake % SoT).\n4. Chat: status chip, cancel, permission Allow/Deny when portal pending APIs respond.\n5. `/desk` deep-link hire/brief/return (allowlisted).\n6. Env + Portal/CSS health in TopBar."
+                }
+              ]
+            },
+            {
+              "id": "8aa90a1d1d3e",
+              "slug": "promote",
+              "title": "Promote",
+              "summary": "MyAgent Q1/Q2 + `.cursor/skills/agentverse-promote` + **field-ops**.",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.869Z",
+              "order": 15,
+              "blocks": [
+                {
+                  "id": "2824ef285e16",
+                  "type": "prose",
+                  "markdown": "MyAgent Q1/Q2 + `.cursor/skills/agentverse-promote` + **field-ops**.  \nEvidence: `H:\\releases\\agentverse-0.3.0\\evidence\\`."
+                }
+              ]
+            },
+            {
+              "id": "21b7256f25a6",
+              "slug": "crew-skills",
+              "title": "Crew / skills",
+              "summary": "Manifest: `agents/crew-manifest.md`",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.869Z",
+              "order": 16,
+              "blocks": [
+                {
+                  "id": "6ae5b785b157",
+                  "type": "prose",
+                  "markdown": "- Manifest: `agents/crew-manifest.md`\n- Hire: `agents/hires/2026-07-15-upgradation-functionality.md`\n- Pre-work: `agents/pre-work/waves/upgradation/`"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "321ee0b384bf",
+          "slug": "technical",
+          "kind": "technical",
+          "title": "Technical",
+          "summary": "Architecture, promote, ports, and implementation map.",
+          "chapters": [
+            {
+              "id": "b9f83b2b01f0",
+              "slug": "agentverse-implementation-guide",
+              "title": "AgentVerse — Implementation Guide",
+              "summary": "Status:** DEV **0.3.0** on `feature/upgradation-functionality` (base `v0.2.2-stable`). Classic PREPROD/PROD remain **0.2.x** until Q1/Q2.",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.869Z",
+              "order": 0,
+              "blocks": [
+                {
+                  "id": "ddc93a852e50",
+                  "type": "prose",
+                  "markdown": "**Status:** DEV **0.3.0** on `feature/upgradation-functionality` (base `v0.2.2-stable`). Classic PREPROD/PROD remain **0.2.x** until Q1/Q2.  \n**Stack:** Next.js 15 + R3F / Three.js  \n**API:** agent-portal DEV `:8080` / PREPROD `:4080` / PROD `:5080`  \n**UI ports:** DEV **3310** · PREPROD **4310** · PROD **5310**  \n**Personas:** Rajesh, Karthik, Lavanya, Aravind, Meenakshi, Muthu, Kabilan (`src/prompts/personas.json`)"
+                }
+              ]
+            },
+            {
+              "id": "80e56d7cfd24",
+              "slug": "run",
+              "title": "Run",
+              "summary": "cd E:\\MyWorkspace\\agentverse-project",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.869Z",
+              "order": 1,
+              "blocks": [
+                {
+                  "id": "76f8cf370882",
+                  "type": "prose",
+                  "markdown": "```powershell\n# DEV\ncd E:\\MyWorkspace\\agentverse-project\nnpm install\nnpm run dev          # or: npm run dev:stack\n\n# PREPROD / PROD — after promote GO only\ncd F:\\apps\\agentverse   # or G:\\apps\\agentverse\n.\\start.ps1 -EnvName preprod   # or prod\n```\n\nPublic URLs: [OPS.md](./OPS.md) · Deep-links: [DEEP-LINK-CONTRACT.md](./DEEP-LINK-CONTRACT.md) · Promote: [PROMOTE-UPGRADATION.md](./PROMOTE-UPGRADATION.md)"
+                }
+              ]
+            },
+            {
+              "id": "5c1901798f0b",
+              "slug": "architecture",
+              "title": "Architecture",
+              "summary": "| App Router + health/proxies | `src/app` (+ `/desk` deep-link entry) |",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.869Z",
+              "order": 2,
+              "blocks": [
+                {
+                  "id": "c6747a32e69b",
+                  "type": "prose",
+                  "markdown": "| Area | Path |\n|------|------|\n| App Router + health/proxies | `src/app` (+ `/desk` deep-link entry) |\n| TN office scene | `src/components/scene` |\n| HUD | `src/components/hud` (Session Desk, chat, quests, incident strip) |\n| Portal client | `src/lib/api.ts` via `/api/portal` |\n| Deep-links | `src/lib/session-share.ts` |\n| Orchestrator | `src/lib/orchestrator.ts` |\n| Office state | `src/lib/store.ts` (Zustand persist `agentverse-office-v2`; projects remain local flavor until durable conventions) |\n| Release launcher | `scripts/start-release.ps1` |"
+                }
+              ]
+            },
+            {
+              "id": "988e26c9794a",
+              "slug": "upgradation-behavior-0-3-0",
+              "title": "Upgradation behavior (0.3.0)",
+              "summary": "Session Desk: search, status filters, cancel run, title-at-create.",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.869Z",
+              "order": 3,
+              "blocks": [
+                {
+                  "id": "a039522bcd55",
+                  "type": "prose",
+                  "markdown": "1. Session Desk: search, status filters, cancel run, title-at-create.\n2. Busy resume: cancel-first then reuse; fork only as last resort.\n3. Quests bind `sessionId`; status from portal (no fake % SoT).\n4. Chat: status chip, cancel, permission Allow/Deny when portal pending APIs respond.\n5. `/desk` deep-link hire/brief/return (allowlisted).\n6. Env + Portal/CSS health in TopBar."
+                }
+              ]
+            },
+            {
+              "id": "6f9f4a322436",
+              "slug": "promote",
+              "title": "Promote",
+              "summary": "MyAgent Q1/Q2 + `.cursor/skills/agentverse-promote` + **field-ops**.",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.869Z",
+              "order": 4,
+              "blocks": [
+                {
+                  "id": "50036741a26b",
+                  "type": "prose",
+                  "markdown": "MyAgent Q1/Q2 + `.cursor/skills/agentverse-promote` + **field-ops**.  \nEvidence: `H:\\releases\\agentverse-0.3.0\\evidence\\`."
+                }
+              ]
+            },
+            {
+              "id": "d53cab25b970",
+              "slug": "crew-skills",
+              "title": "Crew / skills",
+              "summary": "Manifest: `agents/crew-manifest.md`",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.869Z",
+              "order": 5,
+              "blocks": [
+                {
+                  "id": "a38357c141e8",
+                  "type": "prose",
+                  "markdown": "- Manifest: `agents/crew-manifest.md`\n- Hire: `agents/hires/2026-07-15-upgradation-functionality.md`\n- Pre-work: `agents/pre-work/waves/upgradation/`"
+                }
+              ]
+            },
+            {
+              "id": "9059049adba8",
+              "slug": "promote-agentverse-upgrade-0-3-0-side-fleet",
+              "title": "Promote — agentverse-upgrade 0.3.0 (side fleet)",
+              "summary": "Promote — agentverse-upgrade 0.3.0 (side fleet)",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.870Z",
+              "order": 6,
+              "blocks": [
+                {
+                  "id": "4ee68bdfde1f",
+                  "type": "prose",
+                  "markdown": ""
+                }
+              ]
+            },
+            {
+              "id": "f1b8315e62fd",
+              "slug": "rule",
+              "title": "Rule",
+              "summary": "Deploy only to `F:\\apps\\agentverse-upgrade` / `G:\\apps\\agentverse-upgrade` on **4312 / 5312**.",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.871Z",
+              "order": 7,
+              "blocks": [
+                {
+                  "id": "2b67ee49fe58",
+                  "type": "prose",
+                  "markdown": "Deploy only to `F:\\apps\\agentverse-upgrade` / `G:\\apps\\agentverse-upgrade` on **4312 / 5312**.  \nNever stop or overwrite `F:\\apps\\agentverse`, `G:\\apps\\agentverse`, `*-v2`, ProdDeck, portal, CSS."
+                }
+              ]
+            },
+            {
+              "id": "5d00fd94425f",
+              "slug": "hosts",
+              "title": "Hosts",
+              "summary": "| Env | Host | Upstream |",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.871Z",
+              "order": 8,
+              "blocks": [
+                {
+                  "id": "57c0e613eca6",
+                  "type": "prose",
+                  "markdown": "| Env | Host | Upstream |\n|-----|------|----------|\n| PREPROD | https://agentverse-upgrade-staging.delena.buzz | :4312 |\n| PROD | https://agentverse-upgrade.delena.buzz | :5312 |"
+                }
+              ]
+            },
+            {
+              "id": "c39d23c95d35",
+              "slug": "crew",
+              "title": "Crew",
+              "summary": "promote-em + qa + security + review + ops + **field-ops**",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.871Z",
+              "order": 9,
+              "blocks": [
+                {
+                  "id": "b6d0fa6223d5",
+                  "type": "prose",
+                  "markdown": "promote-em + qa + security + review + ops + **field-ops**"
+                }
+              ]
+            },
+            {
+              "id": "5063cb36d0ac",
+              "slug": "bake",
+              "title": "Bake",
+              "summary": "`NEXT_PUBLIC_CSS_ISSUER=https://css.delena.buzz` · `NEXT_PUBLIC_AV_ENV=PREPROD|PROD`",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.871Z",
+              "order": 10,
+              "blocks": [
+                {
+                  "id": "55c1c832ae69",
+                  "type": "prose",
+                  "markdown": "`NEXT_PUBLIC_CSS_ISSUER=https://css.delena.buzz` · `NEXT_PUBLIC_AV_ENV=PREPROD|PROD`"
+                }
+              ]
+            },
+            {
+              "id": "06372c69bc55",
+              "slug": "evidence",
+              "title": "Evidence",
+              "summary": "`H:\\releases\\agentverse-upgrade-0.3.0\\evidence\\q1|q2\\`",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.871Z",
+              "order": 11,
+              "blocks": [
+                {
+                  "id": "c4ee8b929f9b",
+                  "type": "prose",
+                  "markdown": "`H:\\releases\\agentverse-upgrade-0.3.0\\evidence\\q1|q2\\`"
+                }
+              ]
+            },
+            {
+              "id": "1f8b8b14e230",
+              "slug": "project-workspace-binding",
+              "title": "Project ↔ workspace binding",
+              "summary": "SoT for this convention:** this doc + `src/lib/project-workspace.ts`",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.871Z",
+              "order": 12,
+              "blocks": [
+                {
+                  "id": "c7fd23f47ecb",
+                  "type": "prose",
+                  "markdown": "**SoT for this convention:** this doc + `src/lib/project-workspace.ts`  \n**Fleet:** agentverse-upgrade (`3312` / `4312` / `5312`) only"
+                }
+              ]
+            },
+            {
+              "id": "70049e810770",
+              "slug": "ownership",
+              "title": "Ownership",
+              "summary": "| Concern | Source of truth |",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.871Z",
+              "order": 13,
+              "blocks": [
+                {
+                  "id": "4aa7f0349de4",
+                  "type": "prose",
+                  "markdown": "| Concern | Source of truth |\n|---------|-----------------|\n| Portal **sessions** (id, status, messages, permissions) | Agent Portal API |\n| Office **projects** (desk clusters, crew, local UI) | AgentVerse zustand persist (`agentverse-office-v2`) |\n| Project ↔ workspace path | `OfficeProject.workspacePath` (local durable field) |\n\nPortal does **not** own office projects. AgentVerse does **not** invent a second session store — it only binds a project to a workspace path used when creating or switching sessions."
+                }
+              ]
+            },
+            {
+              "id": "055b53964be3",
+              "slug": "path-convention",
+              "title": "Path convention",
+              "summary": "Hub** (`id: \"hub\"`) → `NEXT_PUBLIC_DEFAULT_WORKSPACE` (default `demo`).",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.871Z",
+              "order": 14,
+              "blocks": [
+                {
+                  "id": "fdb2a732370f",
+                  "type": "prose",
+                  "markdown": "1. **Hub** (`id: \"hub\"`) → `NEXT_PUBLIC_DEFAULT_WORKSPACE` (default `demo`).\n2. **Deployed project** → `{DEFAULT_WORKSPACE}/{slug(project.name)}`  \n   - Slug: lowercase, non-alnum → `-`, max 48 chars (see `projectSlug`).\n   - Separator follows the base (`/` vs `\\`).\n3. On `deployProject`, the resolved path is written to `OfficeProject.workspacePath` and becomes the active `workspacePath` in the store (also remembered in `recentWorkspaces`).\n4. On `setActiveProject`, if the project has `workspacePath`, the global store `workspacePath` switches to it."
+                }
+              ]
+            },
+            {
+              "id": "0b9a3d17bde7",
+              "slug": "session-title-convention",
+              "title": "Session title convention",
+              "summary": "When a portal session is created **for** an office project:",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.871Z",
+              "order": 15,
+              "blocks": [
+                {
+                  "id": "e4a5dddf75ad",
+                  "type": "prose",
+                  "markdown": "When a portal session is created **for** an office project:\n\n```text\nAgentVerse · {project.name}\n```\n\nHelpers: `sessionTitleForProject`, `resolveProjectWorkspacePath` in `src/lib/project-workspace.ts`.\n\nChat / Session Desk may still use path-basename titles for ad-hoc workspaces that are not tied to a project."
+                }
+              ]
+            },
+            {
+              "id": "7bce1ac24456",
+              "slug": "ui",
+              "title": "UI",
+              "summary": "`ProjectSwitcher` shows a short workspace hint (last path segment) and calls `setActiveProject`, which restores the bound path when present.",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.871Z",
+              "order": 16,
+              "blocks": [
+                {
+                  "id": "6589af22c140",
+                  "type": "prose",
+                  "markdown": "`ProjectSwitcher` shows a short workspace hint (last path segment) and calls `setActiveProject`, which restores the bound path when present."
+                }
+              ]
+            },
+            {
+              "id": "9b219d8aa004",
+              "slug": "non-goals",
+              "title": "Non-goals",
+              "summary": "Creating directories on disk from the browser (portal / host enforces `AGENT_WORKSPACE_ROOT`).",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.871Z",
+              "order": 17,
+              "blocks": [
+                {
+                  "id": "7b3c60a03085",
+                  "type": "prose",
+                  "markdown": "- Creating directories on disk from the browser (portal / host enforces `AGENT_WORKSPACE_ROOT`).\n- Moving classic (`:3310`…) or stable-v2 (`:3311`…) fleets.\n- Replacing portal session lookup by workspace path — `sessionsByPath` remains a local cache keyed by path."
+                }
+              ]
+            },
+            {
+              "id": "41c54dff06f7",
+              "slug": "02-technical-architecture",
+              "title": "02 - Technical Architecture",
+              "summary": "Status:** APPROVED (GO 2026-07-12)",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.871Z",
+              "order": 18,
+              "blocks": [
+                {
+                  "id": "e8a0772dca16",
+                  "type": "prose",
+                  "markdown": "**Status:** APPROVED (GO 2026-07-12)  \n**Project:** AgentVerse"
+                }
+              ]
+            },
+            {
+              "id": "a007986d5fc8",
+              "slug": "stack",
+              "title": "Stack",
+              "summary": "| App | Next.js 15 (App Router) + TypeScript |",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.871Z",
+              "order": 19,
+              "blocks": [
+                {
+                  "id": "dc7197b97736",
+                  "type": "prose",
+                  "markdown": "| Layer | Choice |\n|-------|--------|\n| App | Next.js 15 (App Router) + TypeScript |\n| 3D | React Three Fiber + Drei + Three.js |\n| State | Zustand |\n| Auth | CSS via agent-portal `/api/auth/config` |\n| API | Rewrite `/api/portal/*` → `http://127.0.0.1:8080/api/*` |\n| DEV port | **3310** |\n| PWA | manifest + service worker shell |"
+                }
+              ]
+            },
+            {
+              "id": "a005d8c82f08",
+              "slug": "migration-map-agent-portal-agentverse",
+              "title": "Migration map (agent-portal → AgentVerse)",
+              "summary": "| Portal feature | AgentVerse v0.1 |",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.871Z",
+              "order": 20,
+              "blocks": [
+                {
+                  "id": "c484f8dabb42",
+                  "type": "prose",
+                  "markdown": "| Portal feature | AgentVerse v0.1 |\n|----------------|-----------------|\n| CSS login | LoginOverlay |\n| Sessions create/list | ChatPanel bootstrap |\n| Prompt + messages | ChatPanel + poll |\n| Sub-agents / routing | Rajveer `orchestrator.ts` + personas.json |\n| STOMP streaming | Phase follow-up (poll works) |\n| Changes / Files / Monaco | Later missions |\n| Angular UI | Replaced by 3D hub |"
+                }
+              ]
+            },
+            {
+              "id": "abac74088a6f",
+              "slug": "components",
+              "title": "Components",
+              "summary": "HubScene, PersonaAvatar (low-poly + LOD-ish markers)",
+              "status": "published",
+              "version": 1,
+              "updatedAt": "2026-07-14T20:58:03.871Z",
+              "order": 21,
+              "blocks": [
+                {
+                  "id": "dd655cd7fc1c",
+                  "type": "prose",
+                  "markdown": "- HubScene, PersonaAvatar (low-poly + LOD-ish markers)\n- TopBar, QuestPanel, ChatPanel, LoginOverlay"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

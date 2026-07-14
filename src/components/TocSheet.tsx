@@ -44,18 +44,19 @@ export function TocSheet({
         aria-hidden={!open}
       >
         <div className="lib-sheet-handle" />
-        <div className="mb-3 flex items-center justify-between">
+        <div className="sticky top-0 z-[1] mb-3 flex items-center justify-between bg-[var(--lib-card)] pb-1">
           <h2 className="lib-display text-lg font-semibold">Chapters</h2>
           <button
             type="button"
             onClick={onClose}
-            className="min-h-11 min-w-11 rounded-full text-[var(--lib-muted)]"
+            className="flex min-h-11 min-w-11 items-center justify-center rounded-full text-[var(--lib-muted)]"
             aria-label="Close"
           >
             ✕
           </button>
         </div>
-        <ol className="max-h-[52dvh] space-y-1 overflow-y-auto overscroll-contain pb-2">
+        <ol className="max-h-[48dvh] space-y-1 overflow-y-auto overscroll-contain pb-2">
+
           {items.map((item, i) => {
             const active = item.slug === currentSlug;
             return (

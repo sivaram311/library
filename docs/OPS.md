@@ -26,13 +26,37 @@ npm start
 npm run smoke
 ```
 
-## Smoke
+## Smoke (HTTP)
+
+```powershell
+npm run build
+npm start
+npm run smoke
+```
 
 1. Home lists AgentVerse shelf + three pack chips
 2. Open Usage → chapter; TOC FAB opens bottom sheet
 3. Search finds prose (e.g. `desk`)
 4. Chrome DevTools: `--viewport 360x780` (Realme SoT)
 5. Safe-area: no chrome in punch-hole center
+
+## E2E (Playwright)
+
+Crew: `agents/hires/2026-07-15-e2e-playwright.md` · viewports from machine SoT.
+
+| Project | Viewport |
+|---------|----------|
+| `realme-p2-pro` | 360×780 (primary) |
+| `tablet-pad2-approx` | 800×1280 |
+| `desktop-1280` | 1280×800 |
+
+```powershell
+npm run e2e           # build + all three projects (12 tests)
+npm run e2e:realme    # Realme only
+npx playwright test --project=desktop-1280
+```
+
+WebServer reuses `:3330` if already up (`reuseExistingServer`). Prefer a fresh build after UI changes.
 
 ## Content refresh
 

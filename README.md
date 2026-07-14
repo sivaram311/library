@@ -28,6 +28,7 @@ npm run dev     # http://127.0.0.1:3330
 npm run build
 npm start
 npm run smoke
+npm run e2e      # Playwright: Realme + tablet + desktop
 ```
 
 ## Docs
@@ -47,6 +48,7 @@ npm run smoke
 - TOC bottom sheet · global search · continue last-read
 - AgentVerse seeded into Usage / Functional / Technical packs
 - PWA manifest (installable shell)
+- Playwright e2e — Realme P2 Pro `360×780`, tablet `800×1280`, desktop `1280×800`
 
 ## Next
 

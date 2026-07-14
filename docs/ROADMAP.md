@@ -31,6 +31,7 @@ Hard rule: **content API + IDs freeze by end of Phase 1.** UI may churn; schema 
 - [x] Seed AgentVerse docs (MD → structured JSON; imperfect OK)
 - [x] TOC bottom sheet; search (title + prose); deep-linkable URLs
 - [x] Last-read continue (localStorage)
+- [x] Playwright e2e (Realme + tablet + desktop) — crew hire `agents/hires/2026-07-15-e2e-playwright.md`
 
 **Exit:** Enjoy reading AgentVerse usage/tech on P2 Pro without wanting the repo tree. Snappy LCP.
 

@@ -11,3 +11,7 @@ dist/
 coverage/
 tsconfig.tsbuildinfo
 *.tsbuildinfo
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/

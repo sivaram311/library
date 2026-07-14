@@ -4,11 +4,11 @@ Phone-first **reader** for technical, functional, and usage docs of apps built i
 
 Authored as a portable content graph → read beautifully on **Realme P2 Pro** → later a **3D game library** skin on the same API.
 
-| Env | Path / URL | Port |
-|-----|------------|------|
-| DEV | `E:\MyWorkspace\sandbox\library` | **3330** |
-| PREPROD | planned | **4330** |
-| PROD | planned | **5330** |
+| Env | Public URL | Port | Path |
+|-----|------------|------|------|
+| DEV | https://library-dev.delena.buzz | **3330** | `E:\MyWorkspace\sandbox\library` |
+| PREPROD | https://library-staging.delena.buzz | **4330** | `F:\apps\library` (promote later) |
+| PROD | https://library.delena.buzz | **5330** | `G:\apps\library` (promote later) |
 
 - **Version:** `0.1.0` (Phase 1 read-only viewer)
 - **app-id:** `library`

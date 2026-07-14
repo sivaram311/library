@@ -1,12 +1,14 @@
 # Library — ops
 
-| Env | Port | Status | Notes |
-|-----|------|--------|-------|
-| DEV | 3330 | reserved / local | `E:\MyWorkspace\sandbox\library` |
-| PREPROD | 4330 | reserved | not deployed |
-| PROD | 5330 | reserved | not deployed |
+| Env | Port | Public host | Upstream path | Status |
+|-----|------|-------------|---------------|--------|
+| DEV | 3330 | https://library-dev.delena.buzz | `E:\MyWorkspace\sandbox\library` | DNS + nginx live |
+| PREPROD | 4330 | https://library-staging.delena.buzz | `F:\apps\library` (planned) | DNS + nginx live; app not deployed yet |
+| PROD | 5330 | https://library.delena.buzz | `G:\apps\library` (planned) | DNS + nginx live; app not deployed yet |
 
-Reservations: `E:\MyAgent\workflow\ports/` · hub `agent-portal/docs/platform/PORT-REGISTRY.md`.
+Nginx: `E:\Source\Deployment\conf\apps\library*.delena.buzz.conf`  
+CF A records (proxied) → machine `PUBLIC_HOST`  
+Reservations: `E:\MyAgent\workflow\ports/` · hub `PORT-REGISTRY.md`.
 
 ## Run (DEV)
 
